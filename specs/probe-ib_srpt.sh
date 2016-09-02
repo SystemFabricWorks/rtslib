@@ -45,7 +45,7 @@ fi
 for port in "${ports}"; do
     # Transform 'fe80:0000:0000:0000:0002:1903:000e:8acd' WWN notation to
     # '0xfe800000000000000002c903000e8acd'
-    wwns="${wwns} $(cat port | sed -e s/fe80/0xfe80/ -e 's/\://g')"
+    wwns="${wwns} $(cat $port | sed -e s/fe80/0xfe80/ -e 's/\://g')"
 done
 
 echo "---" 1>&2
